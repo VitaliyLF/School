@@ -4,13 +4,76 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>School</title>
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
-
-
-
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="logo" href="#0">
+            <img class="logo__img" src="images/logo.svg" alt="logo img" />
+          </a>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#0">Главная </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#0">О нас</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#0">Курсы</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#0">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="user-nav">
+            <a class="user-nav__link" href="#0">Перезвоните сейчас</a>
+            <button class="user-nav__btn">
+              <img
+                class="user-nav__img"
+                src="images/icon/btn-menu.svg"
+                alt="btn menu" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="top-slider">
+        <div class="top-slider__inner">
+          <div class="top-slider__item">
+            <div class="top-slider__item-inner">
+              <div class="top-slider__item-content">
+                <h1 class="top-slider__item-title">
+                  Не знаете с чего начать изучение?
+                </h1>
+                <p class="top-slider__item-text">
+                  Пройдите тест на опредиление уровня языка и мы подберем
+                  програму для вас
+                </p>
+                <form class="top-slider__item-form" action="#">
+                  <input
+                    class="top-slider__item-input"
+                    type="tel"
+                    placeholder="Ваш номер телефону" />
+                  <button class="top-slider__item-btn" type="submit">
+                    Записатись
+                  </button>
+                </form>
+              </div>
+              <img
+                class="top-slider__item-img"
+                src="images/top-slider/1.jpg"
+                alt="slider img" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="js/main.min.js"></script>
   </body>
 </html>
