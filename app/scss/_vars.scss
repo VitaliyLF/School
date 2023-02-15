@@ -1,2 +1,25 @@
 $default: #4c4840;
 $accent: #33d5be;
+
+%SuisseIntl-700 {
+  font-family: 'SuisseIntl-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%SuisseIntl-400 {
+  font-family: 'SuisseIntl-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%btn {
+  border: none;
+  background-color: $accent;
+  border-radius: 10px;
+  padding: 11px 20px;
+  color: #fff;
+  margin-left: -20px;
+  @extend %SuisseIntl-700;
+  font-size: 24px;
+  line-height: 31px;
+  cursor: pointer;
+}
