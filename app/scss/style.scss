@@ -71,9 +71,8 @@
     }
   }
 }
-.slider {
+.top-slider {
   margin: 30px 0;
-
   &__item {
     display: flex !important;
   }
@@ -133,6 +132,7 @@
     z-index: -2;
     flex: 0 0 50%;
     transform: translate(-100%, 0px);
+    position: relative;
     img {
       min-width: 825px;
       height: 600px;
@@ -143,7 +143,9 @@
   .slick-dots {
     display: flex;
     position: absolute;
-    bottom: 55px;
+    top: 0;
+    //right: 0;
+    //bottom: 55px;
     button {
       font-size: 0;
       border: none;
