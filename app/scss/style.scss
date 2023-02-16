@@ -162,4 +162,92 @@
   }
 }
 
+.footer {
+  background-color: $default;
+  .footer-logo {
+    margin-right: 110px;
+  }
+  .footer-top {
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      padding: 43px 0 41px;
+    }
+    &__menu {
+      display: flex;
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      &:nth-child(1) {
+        padding-right: 77px;
+      }
+      &:nth-child(2) {
+        padding-right: 58px;
+        padding-left: 67px;
+        position: relative;
+        &::after,
+        &::before {
+          content: '';
+          width: 2px;
+          height: 68px;
+          background-color: $accent;
+          position: absolute;
+          top: 2px;
+        }
+        &::before {
+          right: 0;
+        }
+        &::after {
+          left: 0;
+        }
+      }
+      &:nth-child(3) {
+        padding-left: 58px;
+      }
+    }
+    &__link {
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: -0.5px;
+      color: #fff;
+      @extend %SuisseIntl-700;
+      margin-bottom: 25px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .go-top {
+      margin-left: auto;
+    }
+  }
+  .footer-bottom {
+    padding-bottom: 43px;
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    &__link {
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.5px;
+      color: #ababab;
+    }
+    &__social {
+      display: flex;
+    }
+    &__social-link + .footer-bottom__social-link {
+      margin-left: 40px;
+    }
+    &__copyright {
+      font-size: 15px;
+      line-height: 24px;
+      letter-spacing: -0.5px;
+      color: #fff;
+      @extend %SuisseIntl-700;
+    }
+  }
+}
+
 @import 'media';
