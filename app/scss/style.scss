@@ -71,8 +71,10 @@
     }
   }
 }
+
 .top-slider {
   margin: 30px 0;
+  position: relative;
   &__item {
     display: flex !important;
   }
@@ -125,6 +127,16 @@
   &__btn {
     @extend %btn;
   }
+  &__counter {
+    position: absolute;
+    left: 16%;
+    bottom: 55px;
+  }
+  &__counter-current,
+  &__counter-all {
+    font-size: 40px;
+    line-height: 52px;
+  }
   &__image {
     max-width: 825px;
     height: 600px;
@@ -132,7 +144,6 @@
     z-index: -2;
     flex: 0 0 50%;
     transform: translate(-100%, 0px);
-    position: relative;
     img {
       min-width: 825px;
       height: 600px;
@@ -143,9 +154,8 @@
   .slick-dots {
     display: flex;
     position: absolute;
-    top: 0;
-    //right: 0;
-    //bottom: 55px;
+    left: 21%;
+    bottom: 65px;
     button {
       font-size: 0;
       border: none;
@@ -154,6 +164,13 @@
       height: 10px;
       border-radius: 10px;
       cursor: pointer;
+    }
+    li {
+      width: 50px;
+      height: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     li + li {
       margin-left: 20px;
