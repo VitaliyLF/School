@@ -71,21 +71,21 @@
     }
   }
 }
-
 .top-slider {
   margin: 30px 0;
   position: relative;
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 0 0 15px;
+  }
   &__item {
     display: flex !important;
+    justify-content: space-between;
   }
   &__content {
-    flex: 0 0 100%;
-  }
-  &__body {
-    width: 55%;
     max-width: 778px;
-    padding-top: 57px;
-    display: inline-block;
+    margin-right: -70px;
   }
   &__title {
     font-size: 60px;
@@ -127,35 +127,17 @@
   &__btn {
     @extend %btn;
   }
-  &__counter {
-    position: absolute;
-    left: 16%;
-    bottom: 55px;
-  }
-  &__counter-current,
-  &__counter-all {
-    font-size: 40px;
-    line-height: 52px;
-  }
-  &__image {
+  &__img {
     max-width: 825px;
     height: 600px;
     object-fit: cover;
     z-index: -2;
-    flex: 0 0 50%;
-    transform: translate(-100%, 0px);
-    img {
-      min-width: 825px;
-      height: 600px;
-      max-width: 100%;
-      object-fit: cover;
-    }
   }
   .slick-dots {
-    display: flex;
     position: absolute;
-    left: 21%;
-    bottom: 65px;
+    bottom: 56px;
+    left: 70px;
+    display: flex;
     button {
       font-size: 0;
       border: none;
@@ -179,8 +161,79 @@
       background-color: $accent;
     }
   }
+  &__counter {
+    display: inline-block;
+    position: absolute;
+    bottom: 48px;
+  }
+  &__counter-current,
+  &__counter-all {
+    font-size: 40px;
+    line-height: 52px;
+  }
 }
+.top-info {
+  background-color: $accent;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0 80px;
+  }
+  &__item {
+    text-align: center;
+    margin: 0 100px;
+    width: 263px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &--staff {
+      position: relative;
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 208px;
+        background-color: #fff;
+        top: 5px;
+      }
+      &::after {
+        right: -100px;
+      }
+      &::before {
+        left: -100px;
+      }
+    }
+  }
 
+  &__number {
+    @extend %SuisseIntl-700;
+    color: #fff;
+    font-size: 64px;
+    line-height: 83px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 263px;
+      height: 5px;
+      background-color: $default;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+  &__descr {
+    color: #fff;
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
 .footer {
   background-color: $default;
   .footer-logo {
