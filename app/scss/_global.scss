@@ -25,3 +25,29 @@ a {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.title {
+  display: inline-block;
+  font-size: 64px;
+  line-height: 83px;
+  @extend %SuisseIntl-700;
+  padding: 0 81px;
+  position: relative;
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    background-color: $accent;
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &::after {
+    right: 0;
+  }
+  &::before {
+    left: 0;
+  }
+}
