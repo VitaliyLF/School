@@ -24,3 +24,10 @@ $accent: #33d5be;
   cursor: pointer;
 }
 
+%radiohidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
