@@ -409,6 +409,32 @@
     border: 1px solid #d6d6d6;
     border-radius: 10px;
     padding: 30px 46px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 159px;
+      height: 159px;
+      background-color: $accent;
+      filter: blur(20px);
+      border-radius: 20px;
+      top: 50%;
+      left: -38px;
+      transform: translateY(-50%);
+      z-index: -2;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 436px;
+      height: 436px;
+      background-color: $accent;
+      filter: blur(20px);
+      border-radius: 20px;
+      top: 35px;
+      right: 0;
+      z-index: -2;
+    }
     &__item {
       display: none;
       &.tabs-content__item--active {
@@ -562,17 +588,88 @@
   .slick-next {
     left: 50%;
     margin-left: 15px;
-
   }
   .slick-prev {
     right: 50%;
     margin-right: 15px;
-
   }
   .slick-disabled {
     background-color: #f7f7f7;
     path {
       fill: $default;
+    }
+  }
+}
+.contacts {
+  margin-top: 110px;
+  background-image: url(../images/contacts-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 561px;
+    height: 561px;
+    background-color: $accent;
+    filter: blur(20px);
+    border-radius: 30px;
+    top: -40px;
+    right: 42px;
+    z-index: -2;
+  }
+  .title {
+    padding: 0 69px;
+  }
+  .contacts-card {
+    max-width: 554px;
+    height: 622px;
+    background-color: $default;
+    color: #fff;
+    border-radius: 15px;
+    padding: 28px 46px 48px;
+    transform: translateY(-50px);
+    &__links {
+      margin-top: 37px;
+      margin-bottom: 30px;
+      font-size: 24px;
+      line-height: 31px;
+    }
+    &__links-item {
+      display: flex;
+      margin-bottom: 16px;
+    }
+    &__links-img {
+      margin-right: 17px;
+    }
+    &__links-email {
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+    &__social {
+      display: flex;
+      margin-bottom: 30px;
+    }
+    .contacts-card__social-item + .contacts-card__social-item {
+      margin-left: 31px;
+    }
+    &__adress {
+      display: flex;
+      align-items: start;
+      font-size: 24px;
+      line-height: 31px;
+      margin-bottom: 30px;
+    }
+    &__adress-img {
+      margin-right: 17px;
+    }
+    &__link {
+      @extend %btn;
+      font-size: 20px;
+      line-height: 26px;
+      padding: 12px 33px;
+      display: block;
+      max-width: 286px;
     }
   }
 }
