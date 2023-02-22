@@ -1,4 +1,9 @@
 $(function () {
+  $('.user-nav__btn').on('click', function () {
+    $(this).toggleClass('user-nav__btn--close')
+    $('.content').toggleClass('content--active')
+  })
+
   $('.top-slider__inner').slick({
     dots: true,
     arrows: false,
@@ -19,6 +24,28 @@ $(function () {
 
     $('.tabs-content__item').removeClass('tabs-content__item--active')
     $($(this).attr('href')).addClass('tabs-content__item--active')
+  })
+
+  $('.screen__btn--next').on('click', function () {
+    if ($('.screen1').is(':visible')) {
+      $('.screen1').fadeOut('slow', function () {
+        $('.screen2').fadeIn('slow')
+      })
+    } else if ($('.screen2').is(':visible')) {
+      $('.screen2').fadeOut('slow', function () {
+        $('.screen3').fadeIn('slow')
+      })
+    } else if ($('.screen3').is(':visible')) {
+      $('.popup').hide()
+    }
+
+    if ($('.screen3').is(':visible') && $('.popup').is(':hidden')) {
+      $('.popup').show()
+    }
+  })
+
+  $('.popup__close').on('click', function () {
+    $('.popup').hide()
   })
 
   $('.news__inner').slick({

@@ -33,11 +33,38 @@
           <div class="user-nav">
             <a class="user-nav__link" href="#0">Перезвоните сейчас</a>
             <button class="user-nav__btn">
-              <img
-                class="user-nav__img"
-                src="images/icon/btn-menu.svg"
-                alt="Кнопка меню" />
+              <span class="bar bar1"></span>
+              <span class="bar bar2"></span>
+              <span class="bar bar3"></span>
             </button>
+          </div>
+        </div>
+        <div class="content">
+          <div class="content">
+            <div class="content__inner">
+              <div class="content__item">
+                <div class="content__item-phone">
+                  <img
+                    class="content__item-img"
+                    src="images/icon/phone-black.svg"
+                    alt="Телефон" />
+                  <a class="content__item-link" href="tel:+48 792-765-778"
+                    >+48 792-765-778</a
+                  >
+                </div>
+                <div class="content__item-phone">
+                  <img
+                    class="content__item-img"
+                    src="images/icon/phone-black.svg"
+                    alt="Телефон" />
+                  <a class="content__item-link" href="tel:+48 792 765 443"
+                    >+48 792 765 443</a
+                  >
+                </div>
+              </div>
+              <div class="content__item">2</div>
+              <div class="content__item">3</div>
+            </div>
           </div>
         </div>
       </div>
@@ -256,112 +283,346 @@
               <div
                 class="tabs-content__item tabs-content__item--active"
                 id="tab1">
-                <div class="tabs-content__item-screen screen">
-                  <h3 class="screen__title">Первый вопрос</h3>
-                  <p class="screen__descr">
+                <div class="tabs-content__item-screen screen1">
+                  <h3 class="screen1__title">Первый вопрос</h3>
+                  <p class="screen1__descr">
                     She keeps saying that she has got ________ patience with
                     kids, but forgets that she didn’t have _______ before she
                     gave birth to her own kids.
                   </p>
-                  <form class="screen__form" action="#0">
-                    <div class="screen__form-inner">
-                      <label class="screen__label">
+                  <form class="screen1__form" action="#0">
+                    <div class="screen1__form-inner">
+                      <label class="screen1__label">
                         <input
-                          class="screen__input"
+                          class="screen1__input"
                           type="radio"
                           name="answer" />
-                        <span class="screen__radio"></span>
-                        <span class="screen__text">enough / as much</span>
+                        <span class="screen1__radio"></span>
+                        <span class="screen1__text">enough / as much</span>
                       </label>
-                      <label class="screen__label">
+                      <label class="screen1__label">
                         <input
-                          class="screen__input"
+                          class="screen1__input"
                           type="radio"
                           name="answer" />
-                        <span class="screen__radio"></span>
-                        <span class="screen__text">too many / any</span>
+                        <span class="screen1__radio"></span>
+                        <span class="screen1__text">too many / any</span>
                       </label>
-                      <label class="screen__label">
+                      <label class="screen1__label">
                         <input
-                          class="screen__input"
+                          class="screen1__input"
                           type="radio"
                           name="answer" />
-                        <span class="screen__radio"></span>
-                        <span class="screen__text">such / none</span>
+                        <span class="screen1__radio"></span>
+                        <span class="screen1__text">such / none</span>
                       </label>
-                      <label class="screen__label">
+                      <label class="screen1__label">
                         <input
-                          class="screen__input"
+                          class="screen1__input"
                           type="radio"
                           name="answer" />
-                        <span class="screen__radio"></span>
-                        <span class="screen__text">so / some</span>
+                        <span class="screen1__radio"></span>
+                        <span class="screen1__text">so / some</span>
                       </label>
                     </div>
-                    <div class="screen__buttons">
-                      <button class="screen__btn" type="submit">
+                    <div class="screen1__buttons">
+                      <button
+                        class="screen1__btn screen__btn--next"
+                        type="submit">
                         Пропустить
                       </button>
                       <button
-                        class="screen__btn screen__btn--active"
+                        class="screen1__btn screen1__btn--active screen__btn--next"
                         type="submit">
                         Дальше
                       </button>
                     </div>
                   </form>
                 </div>
+                <div
+                  class="tabs-content__item-screen screen2"
+                  style="display: none">
+                  <h3 class="screen2__title">Второй вопрос</h3>
+                  <p class="screen2__descr">
+                    Many singers streamed ________ online concerts for people
+                    all around the world
+                  </p>
+                  <form class="screen2__form" action="#0">
+                    <div class="screen2__form-inner">
+                      <label class="screen2__label">
+                        <input
+                          class="screen2__input"
+                          type="radio"
+                          name="answer" />
+                        <span class="screen2__radio"></span>
+                        <span class="screen2__text">his</span>
+                      </label>
+                      <label class="screen2__label">
+                        <input
+                          class="screen2__input"
+                          type="radio"
+                          name="answer" />
+                        <span class="screen2__radio"></span>
+                        <span class="screen2__text">its</span>
+                      </label>
+                      <label class="screen2__label">
+                        <input
+                          class="screen2__input"
+                          type="radio"
+                          name="answer" />
+                        <span class="screen2__radio"></span>
+                        <span class="screen2__text">your</span>
+                      </label>
+                      <label class="screen2__label">
+                        <input
+                          class="screen2__input"
+                          type="radio"
+                          name="answer" />
+                        <span class="screen2__radio"></span>
+                        <span class="screen2__text">their</span>
+                      </label>
+                    </div>
+                    <div class="screen2__buttons">
+                      <button
+                        class="screen2__btn screen__btn--next"
+                        type="submit">
+                        Пропустить
+                      </button>
+                      <button
+                        class="screen2__btn screen2__btn--active screen__btn--next"
+                        type="submit">
+                        Дальше
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div
+                  class="tabs-content__item-screen screen3"
+                  style="display: none">
+                  <h3 class="screen3__title">Третий вопрос</h3>
+                  <p class="screen3__descr">
+                    Wikipedia ________ that Billie Eilish released her second
+                    album "Happier Than Ever" on July 30, 2021
+                  </p>
+                  <form class="screen3__form" action="#0">
+                    <div class="screen3__form-inner">
+                      <label class="screen3__label">
+                        <input
+                          class="screen3__input"
+                          type="radio"
+                          name="answer" />
+                        <span class="screen3__radio"></span>
+                        <span class="screen3__text">says</span>
+                      </label>
+                      <label class="screen3__label">
+                        <input
+                          class="screen3__input"
+                          type="radio"
+                          name="answer" />
+                        <span class="screen3__radio"></span>
+                        <span class="screen3__text">tells</span>
+                      </label>
+                      <label class="screen3__label">
+                        <input
+                          class="screen3__input"
+                          type="radio"
+                          name="answer" />
+                        <span class="screen3__radio"></span>
+                        <span class="screen3__text">speaks</span>
+                      </label>
+                      <label class="screen3__label">
+                        <input
+                          class="screen3__input"
+                          type="radio"
+                          name="answer" />
+                        <span class="screen3__radio"></span>
+                        <span class="screen3__text">said</span>
+                      </label>
+                    </div>
+                    <div class="screen3__buttons">
+                      <button
+                        class="screen3__btn screen__btn--next"
+                        type="submit">
+                        Пропустить
+                      </button>
+                      <button
+                        class="screen3__btn screen3__btn--active screen__btn--next"
+                        type="submit">
+                        Завершить
+                      </button>
+                    </div>
+                  </form>
+                </div>
               </div>
               <div class="tabs-content__item" id="tab2">
-                <div class="tabs-content__item-screen screen">
-                  <h3 class="screen__title">Первый вопрос</h3>
-                  <p class="screen__descr">
+                <div class="tabs-content__item-screen screen1">
+                  <h3 class="screen1__title">Первый вопрос</h3>
+                  <p class="screen1__descr">
                     Schował kora w fałdach bu-bu — długiego, luźnego stroju — i
                     uważnie słuchał, gdy Margaret omawiała wspomnianą ______,
                     wydaną w języku arabskim.
                   </p>
-                  <form class="screen__form" action="#0">
-                    <div class="screen__form-inner">
-                      <label class="screen__label">
+                  <form class="screen1__form" action="#0">
+                    <div class="screen1__form-inner">
+                      <label class="screen1__label">
                         <input
-                          class="screen__input"
+                          class="screen1__input"
                           type="radio"
                           name="answer" />
-                        <span class="screen__radio"></span>
-                        <span class="screen__text">wolniej</span>
+                        <span class="screen1__radio"></span>
+                        <span class="screen1__text">wolniej</span>
                       </label>
-                      <label class="screen__label">
+                      <label class="screen1__label">
                         <input
-                          class="screen__input"
+                          class="screen1__input"
                           type="radio"
                           name="answer" />
-                        <span class="screen__radio"></span>
-                        <span class="screen__text">wolniejszym</span>
+                        <span class="screen1__radio"></span>
+                        <span class="screen1__text">wolniejszym</span>
                       </label>
-                      <label class="screen__label">
+                      <label class="screen1__label">
                         <input
-                          class="screen__input"
+                          class="screen1__input"
                           type="radio"
                           name="answer" />
-                        <span class="screen__radio"></span>
-                        <span class="screen__text">wolność</span>
+                        <span class="screen1__radio"></span>
+                        <span class="screen1__text">wolność</span>
                       </label>
-                      <label class="screen__label">
+                      <label class="screen1__label">
                         <input
-                          class="screen__input"
+                          class="screen1__input"
                           type="radio"
                           name="answer" />
-                        <span class="screen__radio"></span>
-                        <span class="screen__text">wolnymi</span>
+                        <span class="screen1__radio"></span>
+                        <span class="screen1__text">wolnymi</span>
                       </label>
                     </div>
-                    <div class="screen__buttons">
-                      <button class="screen__btn" type="submit">
+                    <div class="screen1__buttons">
+                      <button
+                        class="screen1__btn screen__btn--next"
+                        type="submit">
                         Пропустить
                       </button>
                       <button
-                        class="screen__btn screen__btn--active"
+                        class="screen1__btn screen1__btn--active screen__btn--next"
                         type="submit">
                         Дальше
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div
+                  class="tabs-content__item-screen screen2"
+                  style="display: none">
+                  <h3 class="screen2__title">Второй вопрос</h3>
+                  <p class="screen2__descr">
+                    Schował kora w fałdach bu-bu — długiego, luźnego stroju — i
+                    uważnie słuchał, gdy Margaret omawiała wspomnianą ______,
+                    wydaną w języku arabskim.
+                  </p>
+                  <form class="screen2__form" action="#0">
+                    <div class="screen2__form-inner">
+                      <label class="screen2__label">
+                        <input
+                          class="screen2__input"
+                          type="radio"
+                          name="answer" />
+                        <span class="screen2__radio"></span>
+                        <span class="screen2__text">wolniej</span>
+                      </label>
+                      <label class="screen2__label">
+                        <input
+                          class="screen2__input"
+                          type="radio"
+                          name="answer" />
+                        <span class="screen2__radio"></span>
+                        <span class="screen2__text">wolniejszym</span>
+                      </label>
+                      <label class="screen2__label">
+                        <input
+                          class="screen2__input"
+                          type="radio"
+                          name="answer" />
+                        <span class="screen2__radio"></span>
+                        <span class="screen2__text">wolność</span>
+                      </label>
+                      <label class="screen2__label">
+                        <input
+                          class="screen2__input"
+                          type="radio"
+                          name="answer" />
+                        <span class="screen2__radio"></span>
+                        <span class="screen2__text">wolnymi</span>
+                      </label>
+                    </div>
+                    <div class="screen2__buttons">
+                      <button
+                        class="screen2__btn screen__btn--next"
+                        type="submit">
+                        Пропустить
+                      </button>
+                      <button
+                        class="screen2__btn screen2__btn--active screen__btn--next"
+                        type="submit">
+                        Дальше
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div
+                  class="tabs-content__item-screen screen3"
+                  style="display: none">
+                  <h3 class="screen2__title">Третий вопрос</h3>
+                  <p class="screen2__descr">
+                    Schował kora w fałdach bu-bu — długiego, luźnego stroju — i
+                    uważnie słuchał, gdy Margaret omawiała wspomnianą ______,
+                    wydaną w języku arabskim.
+                  </p>
+                  <form class="screen2__form" action="#0">
+                    <div class="screen2__form-inner">
+                      <label class="screen2__label">
+                        <input
+                          class="screen2__input"
+                          type="radio"
+                          name="answer" />
+                        <span class="screen2__radio"></span>
+                        <span class="screen2__text">wolniej</span>
+                      </label>
+                      <label class="screen2__label">
+                        <input
+                          class="screen2__input"
+                          type="radio"
+                          name="answer" />
+                        <span class="screen2__radio"></span>
+                        <span class="screen2__text">wolniejszym</span>
+                      </label>
+                      <label class="screen2__label">
+                        <input
+                          class="screen2__input"
+                          type="radio"
+                          name="answer" />
+                        <span class="screen2__radio"></span>
+                        <span class="screen2__text">wolność</span>
+                      </label>
+                      <label class="screen2__label">
+                        <input
+                          class="screen2__input"
+                          type="radio"
+                          name="answer" />
+                        <span class="screen2__radio"></span>
+                        <span class="screen2__text">wolnymi</span>
+                      </label>
+                    </div>
+                    <div class="screen2__buttons">
+                      <button
+                        class="screen2__btn screen__btn--next"
+                        type="submit">
+                        Пропустить
+                      </button>
+                      <button
+                        class="screen2__btn screen2__btn--active screen__btn--next"
+                        type="submit">
+                        Завершить
                       </button>
                     </div>
                   </form>
@@ -577,6 +838,40 @@
         </div>
       </div>
     </footer>
+    <div class="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <a class="popup__close" href="#0">
+            <svg
+              width="24"
+              height="23"
+              viewBox="0 0 24 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect
+                x="0.813782"
+                y="20.5061"
+                width="29"
+                height="3"
+                transform="rotate(-45 0.813782 20.5061)"
+                fill="#33d5be" />
+              <rect
+                x="2.1214"
+                y="0.186279"
+                width="29"
+                height="3"
+                transform="rotate(45 2.1214 0.186279)"
+                fill="#33d5be" />
+            </svg>
+          </a>
+          <h2 class="title popup__title">Благодарим Вас</h2>
+          <p class="popup__text">
+            Поздравляем вы прошли тест на знание английского языка.
+          </p>
+          <a class="popup__link" href="#0">Посмотреть результаты</a>
+        </div>
+      </div>
+    </div>
     <script src="js/main.min.js"></script>
   </body>
 </html>
