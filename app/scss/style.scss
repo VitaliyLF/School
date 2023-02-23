@@ -6,7 +6,7 @@
 
 .header {
   background-color: #fff;
-  padding: 36px 0;
+  padding: 12px 0;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   position: fixed;
   top: 0;
@@ -18,7 +18,105 @@
     justify-content: space-between;
     align-items: center;
   }
+  &__content {
+    display: flex;
+    &--active {
+      display: none;
+    }
+    .phone {
+      padding-right: 37px;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 18px;
+        background-color: $accent;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &__inner {
+        display: flex;
+      }
+      &__img {
+        margin-right: 13px;
+      }
+    }
+    .email {
+      margin-right: 133px;
+      margin-left: 44px;
+      &__inner {
+        display: flex;
+      }
+      &__img {
+        margin-right: 13px;
+      }
+    }
+    .switcher {
+      .jq-selectbox__select {
+        padding: 0 20px 0 0;
+        border: none;
+        color: $default;
+        @extend %SuisseIntl-700;
+        font-size: 18px;
+        line-height: 23px;
+        background: none;
+        border-radius: 0;
+        box-shadow: none;
+        text-shadow: none;
+        border-bottom-color: none;
+        height: 23px;
+        border-bottom: 2px solid $accent;
+      }
+      .jq-selectbox__trigger {
+        border-left: none;
+      }
+      .jq-selectbox__trigger-arrow {
+        top: 6px;
+        right: 0;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        width: 16px;
+        height: 14px;
+        background-image: url(../images/icon/switcher-select.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .jq-selectbox__dropdown {
+        width: 100%;
+        margin: 2px 0 0;
+        padding: 0;
+        border: 1px solid #ccc;
+        background: #fff;
+        box-shadow: none;
+        border-radius: none;
+        color: $default;
+        @extend %SuisseIntl-700;
+        font-size: 14px;
+        line-height: 23px;
+      }
+      .jq-selectbox li.selected {
+        background-color: #d6d6d6;
+        color: $default;
+      }
+      .jq-selectbox li {
+        padding: 5px 6px 6px;
+      }
+      .jq-selectbox li:hover {
+        background-color: $accent;
+      }
+      .jq-selectbox .placeholder {
+        color: $default;
+      }
+    }
+  }
   .menu {
+    display: none;
+    &--active {
+      display: block;
+    }
     &__list {
       display: flex;
     }
@@ -113,25 +211,58 @@
     }
     &__inner {
       display: flex;
-      padding-top: 23px;
+      padding: 23px 0 30px;
       justify-content: space-between;
+      align-items: flex-end;
     }
     &__item {
       display: flex;
     }
-    &__item-phone {
+    &__phone {
       display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .content__item-phone + .content__item-phone {
+    .content__phone + .content__phone {
       margin-left: 50px;
     }
-    &__item-img {
+    &__phone-img {
+      margin-right: 13px;
+    }
+    &__social {
+      display: flex;
+      padding-left: 78px;
+      padding-right: 86px;
+      position: relative;
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 47px;
+        background-color: $accent;
+        border-radius: 5px;
+      }
+      &::after {
+        right: 0;
+      }
+      &::before {
+        left: 0;
+      }
+    }
+    .content__social-link + .content__social-link {
+      margin-left: 50px;
+    }
+    &__email {
+      display: flex;
+    }
+    &__email-img {
       margin-right: 13px;
     }
   }
 }
 .top-slider {
-  padding: 161px 0 30px;
+  padding: 113px 0 30px;
   position: relative;
   &__container {
     max-width: 1440px;
@@ -181,6 +312,10 @@
     background-color: #f7f7f7;
     &::placeholder {
       color: $default;
+    }
+    &:focus {
+      outline: none;
+      transition: all 0.3s ease-in-out;
     }
   }
   &__btn {
@@ -235,20 +370,47 @@
 .top-info {
   background-color: $accent;
   padding: 60px 0 80px;
+  &__container {
+    max-width: 1420px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 170px;
+      height: 150px;
+      background-image: url(../images/icon/bg-bottom.svg);
+      background-repeat: no-repeat;
+      left: 50%;
+      top: 160px;
+    }
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 75px;
+      height: 170px;
+      top: 15px;
+      background-image: url(../images/icon/bg-left.svg);
+      background-repeat: no-repeat;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 75px;
+      height: 170px;
+      top: 15px;
+      right: 0;
+      background-image: url(../images/icon/bg-right.svg);
+      background-repeat: no-repeat;
+    }
   }
   &__item {
     text-align: center;
-    margin: 0 100px;
-    width: 263px;
-    &:first-child {
-      margin-left: 0;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
+    width: 100%;
     &--staff {
       position: relative;
       &::after,
@@ -261,10 +423,10 @@
         top: 5px;
       }
       &::after {
-        right: -100px;
+        right: 0;
       }
       &::before {
-        left: -100px;
+        left: 0;
       }
     }
   }
@@ -280,12 +442,12 @@
       content: '';
       position: absolute;
       width: 263px;
-      width: 100%;
       height: 5px;
       background-color: $default;
       bottom: 0;
       right: 50%;
       transform: translateX(50%);
+      z-index: 10;
     }
   }
   &__descr {
@@ -500,9 +662,7 @@
         display: block;
       }
     }
-    .screen1,
-    .screen2,
-    .screen3 {
+    .screen {
       &__title {
         font-size: 36px;
         line-height: 47px;
@@ -537,9 +697,7 @@
       }
       &__input {
         @extend %radiohidden;
-        &:checked + .screen1__radio,
-        &:checked + .screen2__radio,
-        &:checked + .screen3__radio {
+        &:checked + .screen__radio {
           background-color: $accent;
           background-image: url(../images/icon/check-on.svg);
           background-repeat: no-repeat;
