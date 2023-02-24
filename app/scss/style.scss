@@ -4,6 +4,7 @@
 @import 'global';
 @import 'libs';
 
+//start index page
 .header {
   background-color: #fff;
   padding: 12px 0;
@@ -86,7 +87,7 @@
       }
       .jq-selectbox__dropdown {
         width: 100%;
-        margin: 2px 0 0;
+        margin: 10px 0 0;
         padding: 0;
         border: 1px solid #ccc;
         background: #fff;
@@ -402,7 +403,7 @@
       position: absolute;
       width: 75px;
       height: 170px;
-      top: 15px;
+      top: -30px;
       right: 0;
       background-image: url(../images/icon/bg-right.svg);
       background-repeat: no-repeat;
@@ -972,6 +973,149 @@
       letter-spacing: -0.5px;
       color: #fff;
       @extend %SuisseIntl-700;
+    }
+  }
+}
+//finish index page
+
+//start about page
+.top {
+  padding: 113px 0 30px;
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 0 0 15px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    margin-top: 100px;
+    font-size: 60px;
+    line-height: 78px;
+    @extend %SuisseIntl-700;
+    text-transform: uppercase;
+    padding-bottom: 18px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 192px;
+      height: 10px;
+      background-color: $accent;
+      border-radius: 5px;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  &__text {
+    margin: 18px 0;
+    max-width: 349px;
+  }
+  &__link {
+    @extend %btn;
+    padding: 11px 30px;
+    max-width: 209px;
+    display: block;
+    box-shadow: 0px 36px 47px -18px rgba(51, 213, 190, 0.65);
+  }
+  &__img {
+    max-width: 825px;
+    height: 467px;
+    object-fit: cover;
+    img {
+      max-width: 825px;
+      height: 467px;
+      object-fit: cover;
+    }
+  }
+}
+
+.about-info {
+  margin-bottom: 50px;
+  &__block {
+    margin-bottom: 35px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__title {
+    @extend %SuisseIntl-700;
+    font-size: 24px;
+    line-height: 31px;
+  }
+  &__descr {
+    margin-bottom: 35px;
+  }
+  &__item {
+    padding-left: 25px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background-color: $accent;
+      border-radius: 3px;
+      left: 0;
+      top: 0;
+      transform: translateY(50%);
+    }
+  }
+}
+
+.gallary {
+  margin-bottom: 150px;
+  &__content {
+    margin-bottom: 45px;
+    text-align: center;
+  }
+  .title {
+    display: inline-block;
+  }
+  &__inner {
+    display: flex;
+  }
+  &__item {
+    max-width: 322px;
+  }
+  &__img {
+    max-width: 322px;
+    height: 322px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+  .slick-list {
+    margin: 0 112px;
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
+    width: 55px;
+    height: 55px;
+    background-color: $accent;
+    border: 1px solid #d6d6d6;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  .slick-next {
+    right: 0;
+  }
+  .slick-prev {
+    left: 0;
+  }
+  .slick-disabled {
+    background-color: #f7f7f7;
+    path {
+      fill: $default;
     }
   }
 }

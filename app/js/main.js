@@ -35,7 +35,7 @@ $(function () {
     $($(this).attr('href')).addClass('tabs-content__item--active')
   })
 
-  $('.news__inner').slick({
+  $('.news__inner,.gallary__inner').slick({
     dots: false,
     arrows: true,
     slidesToShow: 3,
