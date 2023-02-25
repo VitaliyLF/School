@@ -979,13 +979,8 @@
 //finish index page
 
 //start about page
-.top {
+.about-top {
   padding: 113px 0 30px;
-  &__container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 0 0 15px;
-  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -1021,6 +1016,7 @@
     box-shadow: 0px 36px 47px -18px rgba(51, 213, 190, 0.65);
   }
   &__img {
+    margin-left: -70px;
     max-width: 825px;
     height: 467px;
     object-fit: cover;
@@ -1031,7 +1027,6 @@
     }
   }
 }
-
 .about-info {
   margin-bottom: 50px;
   &__block {
@@ -1064,7 +1059,6 @@
     }
   }
 }
-
 .gallary {
   margin-bottom: 150px;
   &__content {
@@ -1079,6 +1073,7 @@
   }
   &__item {
     max-width: 322px;
+    max-width: 100%;
   }
   &__img {
     max-width: 322px;
@@ -1119,5 +1114,52 @@
     }
   }
 }
+//finish about page
 
+//start contacts-page
+.contacts-page {
+  margin: 130px 0 45px;
+  &__top {
+    text-align: center;
+  }
+  &__top-title {
+    margin-bottom: 130px;
+  }
+  .contacts {
+    margin-top: 0;
+  }
+}
+
+.consultation {
+  display: block;
+  text-align: center;
+  margin-bottom: 53px;
+  &__inner {
+    padding: 37px 10px 68px;
+    background-color: #f5f5f5;
+    border: 1px solid #d6d6d6;
+    border-radius: 10px;
+  }
+  &__text {
+    margin: 5px 0 40px;
+    font-size: 24px;
+    line-height: 31px;
+  }
+  &__input {
+    width: 314px;
+    background-color: #f7f7f7;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0px 36px 47px -18px rgba(51, 213, 190, 0.65);
+    border-radius: 10px;
+    padding: 15px 23px;
+    margin-right: 22px;
+    &::placeholder {
+      color: $default;
+    }
+  }
+  &__btn {
+    @extend %btn;
+  }
+}
+//finish contacts-page
 @import 'media';
