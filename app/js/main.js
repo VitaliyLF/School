@@ -17,7 +17,9 @@ $(function () {
   })
 
   $(document).ready(function () {
-    $('.top-slider__input').inputmask({ mask: '+7 (999) 999-99-99' })
+    $('.top-slider__input,.consultation__input--tel').inputmask({
+      mask: '+7 (999) 999-99-99',
+    })
   })
 
   var slider = $('.top-slider__inner')
