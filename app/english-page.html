@@ -11,7 +11,7 @@
     <header class="header">
       <div class="container">
         <div class="header__inner">
-          <a class="logo header-logo" href="#0">
+          <a class="logo header-logo" href="index.html">
             <img class="logo__img" src="images/logo.svg" alt="Логотип" />
           </a>
           <div class="header__content">
@@ -50,16 +50,16 @@
           <nav class="menu">
             <ul class="menu__list">
               <li class="menu__item">
-                <a class="menu__link" href="#0">Главная </a>
+                <a class="menu__link" href="index.html">Главная </a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#0">О нас</a>
+                <a class="menu__link" href="about-page.html">О нас</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#0">Курсы</a>
+                <a class="menu__link" href="english-page.html">Курсы</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#0">Контакты</a>
+                <a class="menu__link" href="contacts-page.html">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -154,10 +154,10 @@
           </div>
         </div>
       </section>
-      <div class="english-info">
-        <div class="container english-info-container">
-          <div class="english-info__inner">
-            <p class="english-info__text">
+      <div class="info-courses">
+        <div class="container info-courses-container">
+          <div class="info-courses__inner">
+            <p class="info-courses__text">
               Знание английского языка сейчас – это практически обязательный
               навык для всех, кто хочет быть успешным и востребованным. Поэтому,
               даже оказавшись в Польше, стоит задуматься не только об изучении
@@ -168,7 +168,7 @@
               это билет в мир, где стираются границы и языковые барьеры, а все
               зависит исключительно от вас самих.
             </p>
-            <p class="english-info__text">
+            <p class="info-courses__text">
               Понимая важность английского, а также стараясь помочь своим
               студентам лучше адаптироваться к жизни в ЕС, школа Bla-bla School
               разработала уникальные курсы английского языка в Польше – как
@@ -179,41 +179,35 @@
           </div>
         </div>
       </div>
-      <div class="english-course">
+      <div class="courses">
         <div class="container">
-          <div class="english-course__inner">
-            <div class="english-course__item">
-              <h3 class="english-course__title">Онлайн курс</h3>
-              <ul class="english-course__list">
-                <li class="english-course__list-item">
-                  Уровень: A1/А2/В1/B2/C1
-                </li>
-                <li class="english-course__list-item">От 1 месяца</li>
-                <li class="english-course__list-item">От 3 раз в неделю</li>
+          <div class="courses__inner">
+            <div class="courses__item">
+              <h3 class="courses__title">Онлайн курс</h3>
+              <ul class="courses__list">
+                <li class="courses__list-item">Уровень: A1/А2/В1/B2/C1</li>
+                <li class="courses__list-item">От 1 месяца</li>
+                <li class="courses__list-item">От 3 раз в неделю</li>
               </ul>
-              <a class="english-course__link" href="#0">Записаться</a>
+              <a class="courses__link" href="#0">Записаться</a>
             </div>
-            <div class="english-course__item english-course__item--active">
-              <h3 class="english-course__title">Интенсивный курс</h3>
-              <ul class="english-course__list">
-                <li class="english-course__list-item">
-                  Уровень: A1/А2/В1/B2/C1
-                </li>
-                <li class="english-course__list-item">2 недели</li>
-                <li class="english-course__list-item">62 часа</li>
+            <div class="courses__item courses__item--active">
+              <h3 class="courses__title">Интенсивный курс</h3>
+              <ul class="courses__list">
+                <li class="courses__list-item">Уровень: A1/А2/В1/B2/C1</li>
+                <li class="courses__list-item">2 недели</li>
+                <li class="courses__list-item">62 часа</li>
               </ul>
-              <a class="english-course__link" href="#0">Записаться</a>
+              <a class="courses__link" href="#0">Записаться</a>
             </div>
-            <div class="english-course__item">
-              <h3 class="english-course__title">Офлайн курс</h3>
-              <ul class="english-course__list">
-                <li class="english-course__list-item">
-                  Уровень: A1/А2/В1/B2/C1
-                </li>
-                <li class="english-course__list-item">От 1 месяца</li>
-                <li class="english-course__list-item">От 3 раз в неделю</li>
+            <div class="courses__item">
+              <h3 class="courses__title">Офлайн курс</h3>
+              <ul class="courses__list">
+                <li class="courses__list-item">Уровень: A1/А2/В1/B2/C1</li>
+                <li class="courses__list-item">От 1 месяца</li>
+                <li class="courses__list-item">От 3 раз в неделю</li>
               </ul>
-              <a class="english-course__link" href="#0">Записаться</a>
+              <a class="courses__link" href="#0">Записаться</a>
             </div>
           </div>
         </div>
@@ -366,6 +360,29 @@
           </div>
         </div>
       </section>
+      <section class="consultation">
+        <div class="container">
+          <div class="consultation__inner">
+            <h2 class="title">Остались вопросы?</h2>
+            <p class="consultation__text">
+              Оставте ваш номер для связи и мы перезвоним вам!
+            </p>
+            <form class="consultation__form" action="#">
+              <input
+                class="consultation__input consultation__input--text"
+                type="text"
+                placeholder="Ваше имя" />
+              <input
+                class="consultation__input consultation__input--tel"
+                type="tel"
+                placeholder="Ваш номер телефону" />
+              <button class="consultation__btn" type="submit">
+                Записатись
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
       <section class="contacts">
         <div class="container">
           <div class="contacts-card">
@@ -448,7 +465,7 @@
       <div class="container">
         <div class="footer-top">
           <div class="footer-top__inner">
-            <a class="logo footer-logo" href="#0">
+            <a class="logo footer-logo" href="index.html">
               <img
                 class="logo__img"
                 src="images/logo-white.svg"
@@ -456,17 +473,21 @@
             </a>
             <ul class="footer-top__menu">
               <li class="footer-top__item">
-                <a class="footer-top__link" href="#0">Главная </a>
-                <a class="footer-top__link" href="#0">О нас </a>
+                <a class="footer-top__link" href="index.html">Главная </a>
+                <a class="footer-top__link" href="about-page.html">О нас </a>
               </li>
               <li class="footer-top__item">
-                <a class="footer-top__link" href="#0"
+                <a class="footer-top__link" href="english-page.html"
                   >Курс английского языка
                 </a>
-                <a class="footer-top__link" href="#0">Курс польского языка </a>
+                <a class="footer-top__link" href="polish-page.html"
+                  >Курс польского языка
+                </a>
               </li>
               <li class="footer-top__item">
-                <a class="footer-top__link" href="#0">Контакты </a>
+                <a class="footer-top__link" href="contacts-page.html"
+                  >Контакты
+                </a>
               </li>
             </ul>
             <a class="go-top" href="#body">
