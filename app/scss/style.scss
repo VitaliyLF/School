@@ -1132,7 +1132,7 @@
 .consultation {
   display: block;
   text-align: center;
-  margin-bottom: 53px;
+  margin: 45px 0 53px;
   &__inner {
     padding: 37px 10px 68px;
     background-color: #f5f5f5;
@@ -1221,7 +1221,7 @@
     margin-left: -70px;
   }
 }
-.english-info {
+.info-courses {
   margin-bottom: 60px;
   background-color: $accent;
   &-container {
@@ -1234,17 +1234,17 @@
       position: absolute;
       width: 50px;
       height: 120px;
-      background-image: url(../images/english-page/english-bg-left.svg);
+      background-image: url(../images/icon/courses-bg-left.svg);
       background-repeat: no-repeat;
       top: 140px;
-      left: -30px;
+      left: 0;
     }
     &::before {
       content: '';
       position: absolute;
       width: 50px;
       height: 50px;
-      background-image: url(../images/english-page/english-bg-right.svg);
+      background-image: url(../images/icon/courses-bg-right.svg);
       background-repeat: no-repeat;
       right: 0;
       top: 40px;
@@ -1262,8 +1262,7 @@
     }
   }
 }
-.english-course {
-  margin-bottom: 120px;
+.courses {
   &__inner {
     display: flex;
   }
@@ -1277,21 +1276,21 @@
     &--active {
       height: 461px;
       background-color: $accent;
-      .english-course__title {
+      .courses__title {
         color: #fff;
         &::after {
           background-color: $default;
         }
       }
-      ul.english-course__list {
+      ul.courses__list {
         margin-bottom: 55px;
       }
-      .english-course__list-item {
+      .courses__list-item {
         &::before {
           background-color: #fff;
         }
       }
-      .english-course__link {
+      .courses__link {
         background-color: #fff;
         color: $accent;
       }
@@ -1320,7 +1319,7 @@
       bottom: 0;
     }
   }
-  .english-course__list {
+  .courses__list {
     color: #000;
     font-size: 24px;
     line-height: 31px;
@@ -1355,6 +1354,7 @@
   }
 }
 .test {
+  padding-top: 120px;
   h2 {
     &:first-child {
       &::after,
@@ -1365,4 +1365,12 @@
   }
 }
 //end english-page
+
+//start polish-page
+.info-courses {
+  &__inner {
+    padding: 75px;
+  }
+}
+//end polish-page
 @import 'media';
