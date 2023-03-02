@@ -2,53 +2,71 @@
   .header {
     &__content {
       display: none;
+      &--active {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 300px;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        .phone {
+          padding-right: 0;
+          margin-bottom: 20px;
+          &::before {
+            display: none;
+          }
+        }
+        .email {
+          margin: 0 0 20px;
+        }
+      }
+    }
+  }
+  .header .menu--active {
+    position: absolute;
+    background-color: #fff;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    .menu__list {
+      padding: 20px;
+      flex-direction: column;
+      align-items: center;
+    }
+    .menu__item {
+      padding-right: 0;
+      margin-bottom: 20px;
+      border-bottom: 2px solid $accent;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &::after {
+        display: none;
+      }
+    }
+    .menu__item + .menu__item {
+      margin-left: 0;
     }
   }
   .header .content--active {
     display: none;
   }
-  .header .menu {
-    position: absolute;
-    right: 100%;
-    display: block;
-    transform: translateY(-200%);
-    transition: all 0.3s;
-  }
-  .header .menu--active {
-    transform: translateY(0%);
-    transition: all 0.3s;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    z-index: 5;
-  }
-  .header .menu__list {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: #fff;
-    padding: 20px 20px 40px;
-  }
-  .header .menu__item {
-    padding-right: 0;
-    margin-bottom: 20px;
-    width: 100%;
-    //text-align: left;
-    text-align: center;
-    &:last-child {
-      margin-bottom: 0;
+  .top-slider {
+    padding: 130px 0 80px;
+    &__container {
+      padding: 0 15px;
     }
-    &::after {
-      display: none;
+    &__item {
+      display: block !important;
     }
-  }
-  .header .menu__item + .menu__item {
-    margin-left: 0;
-  }
-  .header .menu__link {
-    padding-bottom: 10px;
-    border-bottom: 2px solid $accent;
+    &__content {
+      margin-right: 0;
+      max-width: 100%;
+      margin-bottom: 60px;
+    }
   }
 }
 
@@ -56,6 +74,11 @@
   .header {
     &__inner {
       display: block;
+    }
+    &__content {
+      &--active {
+        top: 370px;
+      }
     }
     .logo {
       display: block;
@@ -73,8 +96,6 @@
     }
   }
   .header .menu--active {
-    transform: translateY(0%);
-    transition: all 0.3s;
     position: absolute;
     top: 150px;
     left: 0;
