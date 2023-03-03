@@ -55,34 +55,82 @@
     display: none;
   }
   .top-slider {
-    padding: 130px 0 80px;
+    padding: 130px 0 0;
     &__container {
       padding: 0 15px;
     }
     &__item {
-      display: block !important;
+      flex-direction: column;
+      justify-content: space-between;
     }
     &__content {
       margin-right: 0;
-      max-width: 100%;
       margin-bottom: 60px;
+    }
+    &__form {
+      box-shadow: none;
+    }
+    &__counter {
+      bottom: -50px;
+    }
+    .slick-dots {
+      bottom: -40px;
+    }
+  }
+  .top-info {
+    margin-top: 140px;
+    &__container {
+      &::after {
+        display: none;
+      }
+    }
+    &__inner {
+      flex-direction: column;
+      &::after {
+        top: 20%;
+        height: 140px;
+      }
+      &::before {
+        top: 60%;
+        width: 50px;
+      }
+    }
+    &__item {
+      margin-bottom: 35px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__item--staff {
+      &::after {
+        left: 50%;
+        top: 77px;
+        transform: rotate(90deg);
+      }
+      &::before {
+        transform: rotate(90deg);
+        left: 50%;
+        top: -115px;
+      }
+    }
+    &__item--graduate {
+      padding-top: 35px;
     }
   }
 }
-
+@media (max-width: 875px) {
+  .top-slider {
+    &__img {
+      height: 100%;
+    }
+  }
+}
 @media (max-width: 580px) {
   .header {
-    &__inner {
-      display: block;
-    }
     &__content {
       &--active {
-        top: 370px;
+        top: 310px;
       }
-    }
-    .logo {
-      display: block;
-      margin-bottom: 20px;
     }
     .user-nav {
       &__link {
@@ -97,9 +145,146 @@
   }
   .header .menu--active {
     position: absolute;
-    top: 150px;
+    top: 80px;
     left: 0;
     width: 100%;
     z-index: 5;
+  }
+  .top-slider {
+    &__content {
+      margin-bottom: 20px;
+    }
+    &__title {
+      font-size: 28px;
+      line-height: 36px;
+      padding-bottom: 20px;
+    }
+    &__text {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      line-height: 18px;
+      max-width: 265px;
+    }
+    &__form {
+      display: flex;
+    }
+    &__input {
+      padding: 8px 10px 8px 8px;
+      width: 100%;
+      font-size: 14px;
+      line-height: 18px;
+      &::placeholder {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+    &__btn {
+      font-size: 14px;
+      line-height: 18px;
+      padding: 11px 15px;
+    }
+    &__counter {
+      bottom: -45px;
+    }
+    &__counter-current,
+    &__counter-all {
+      font-size: 25px;
+      line-height: 1;
+    }
+    .slick-dots {
+      left: 50px;
+      button {
+        width: 45px;
+      }
+      li + li {
+        margin-left: 10px;
+      }
+    }
+  }
+  .top-info {
+    margin-top: 70px;
+    padding: 35px 0;
+    &__inner {
+      &::after {
+        top: 5%;
+        left: -15px;
+      }
+      &::before {
+        top: 70%;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    .header__content {
+      &--active {
+        top: 240px;
+        padding: 10px 10px 20px 10px;
+        font-size: 18px;
+        .phone,
+        .email {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .menu--active {
+      top: 58px;
+      .menu__list {
+        padding: 10px;
+      }
+      .menu__item {
+        margin-bottom: 10px;
+      }
+      .menu__link {
+        font-size: 18px;
+      }
+    }
+    .header-logo {
+      width: 106px;
+      height: 35px;
+    }
+    .user-nav {
+      &__link {
+        font-size: 10px;
+        line-height: 13px;
+        padding: 10px 12px;
+      }
+      &__btn {
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        .bar {
+          height: 2px;
+        }
+        .bar1 {
+          top: 10px;
+          left: 8px;
+          width: 18px;
+        }
+        .bar2 {
+          top: 16px;
+          left: 16px;
+          width: 10px;
+        }
+        .bar3 {
+          top: 22px;
+          left: 8px;
+          width: 18px;
+        }
+        &--close {
+          .bar1 {
+            top: 16px;
+          }
+          .bar3 {
+            top: 16px;
+          }
+        }
+      }
+    }
+  }
+  .top-slider {
+    padding: 90px 0 0;
   }
 }
