@@ -16,10 +16,8 @@ $(function () {
     //autoplaySpeed: 2000,
   })
 
-  $(document).ready(function () {
-    $('.top-slider__input,.consultation__input--tel').inputmask({
-      mask: '+7 (999) 999-99-99',
-    })
+  $('.top-slider__input,.consultation__input--tel').inputmask({
+    mask: '+7 (999) 999-99-99',
   })
 
   var slider = $('.top-slider__inner')
@@ -35,6 +33,37 @@ $(function () {
 
     $('.tabs-content__item').removeClass('tabs-content__item--active')
     $($(this).attr('href')).addClass('tabs-content__item--active')
+  })
+
+  $('.tabs-top__item-btn').on('click', function () {
+    $('.tabs-top__item--hidden').slideToggle()
+    if ($(this).hasClass('rotate')) {
+      $(this).removeClass('rotate')
+      $(this).animate(
+        { deg: 0 },
+        {
+          duration: 500,
+          step: function (now) {
+            $(this).css({
+              transform: 'rotate(' + now + 'deg)',
+            })
+          },
+        }
+      )
+    } else {
+      $(this).addClass('rotate')
+      $(this).animate(
+        { deg: 180 },
+        {
+          duration: 500,
+          step: function (now) {
+            $(this).css({
+              transform: 'rotate(' + now + 'deg)',
+            })
+          },
+        }
+      )
+    }
   })
 
   $('.news__inner,.gallary__inner').slick({

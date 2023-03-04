@@ -601,6 +601,13 @@
     text-align: center;
     margin-bottom: 10px;
   }
+  .title {
+    max-width: 1045px;
+    &::after,
+    &::before {
+      top: 45px;
+    }
+  }
   &__text {
     text-align: center;
     font-size: 24px;
@@ -620,9 +627,15 @@
       font-size: 24px;
       line-height: 31px;
       padding: 12px 0;
+      button {
+        display: none;
+      }
       &--active {
         background-color: $accent;
         color: #fff;
+        button {
+          display: block;
+        }
       }
     }
   }
