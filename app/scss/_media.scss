@@ -163,24 +163,16 @@
       flex-direction: column;
       &__item {
         margin: 0 auto;
+        button {
+          opacity: 1;
+          pointer-events: all;
+        }
         &--active {
           display: block;
           margin: 0 auto;
           position: relative;
           button {
-            display: block;
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
-            position: absolute;
-            width: 18px;
-            height: 14px;
-            background-image: url(../images/icon/test-list-icon.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-            top: 22px;
-            right: 12px;
+            opacity: 1;
           }
         }
         &--hidden {
@@ -461,10 +453,9 @@
       &__item {
         font-size: 15px;
         line-height: 19px;
-        &--active {
-          button {
-            top: 15px;
-          }
+        font-weight: 700;
+        button {
+          top: 16px;
         }
       }
     }
