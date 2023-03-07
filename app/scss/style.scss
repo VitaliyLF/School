@@ -1382,14 +1382,6 @@
 }
 .test-course {
   padding-top: 120px;
-  h2 {
-    &:first-child {
-      &::after,
-      &::before {
-        display: none;
-      }
-    }
-  }
 }
 //end english-page
 
