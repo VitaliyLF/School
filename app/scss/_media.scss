@@ -354,6 +354,25 @@
       margin: 0 50px;
     }
   }
+  .consultation {
+    .title {
+      padding: 0 60px;
+      font-size: 50px;
+      &::after,
+      &::before {
+        top: 40px;
+      }
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__input {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
 }
 @media (max-width: 875px) {
   .top-slider {
@@ -815,6 +834,49 @@
       height: 223px;
     }
   }
+  .contacts-page {
+    &__top-title {
+      font-size: 28px;
+      line-height: 36px;
+      padding: 0 46px;
+      margin-bottom: 120px;
+      &::after,
+      &::before {
+        width: 27px;
+        height: 27px;
+        border-radius: 5px;
+      }
+    }
+  }
+  .consultation {
+    &__inner {
+      padding: 30px 10px 40px;
+    }
+    .title {
+      font-size: 28px;
+      line-height: 36px;
+      text-align: center;
+      padding: 0 40px;
+      &::after,
+      &::before {
+        width: 27px;
+        height: 27px;
+        border-radius: 5px;
+        top: 20px;
+      }
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 21px;
+      margin: 12px 0 20px;
+    }
+    &__input {
+      max-width: 100%;
+    }
+    &__input--tel {
+      margin-bottom: 30px;
+    }
+  }
 }
 @media (max-width: 500px) {
   .header {
@@ -890,5 +952,13 @@
   }
   .top-slider {
     padding: 90px 0 0;
+  }
+}
+@media (max-width: 380px) {
+  .consultation {
+    .title {
+      padding: 0 28px;
+      font-size: 25px;
+    }
   }
 }
