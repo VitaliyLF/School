@@ -64,6 +64,10 @@ $(function () {
     }
   })
 
+  $(window).on('load', function () {
+    $('.news__inner,.gallary__inner').slick({})
+  })
+
   $('.news__inner').slick({
     dots: false,
     arrows: true,
@@ -180,6 +184,12 @@ $(function () {
     var id = $(this).attr('href'),
       top = $(id).offset().top
 
-    $('body,html').animate({ scrollTop: top }, 1500)
+    $('body,html').animate(
+      { scrollTop: top },
+      {
+        duration: 1500,
+        passive: true,
+      }
+    )
   })
 })
