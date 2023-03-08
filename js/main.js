@@ -64,8 +64,8 @@ $(function () {
     }
   })
 
-  $(window).on('load', function () {
-    $('.news__inner,.gallary__inner').slick({})
+  $(function () {
+    $('.gallary__inner').slick({})
   })
 
   $('.news__inner').slick({
