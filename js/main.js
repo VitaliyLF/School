@@ -155,6 +155,15 @@ $(function () {
     ],
   })
 
+  var $slickPrev = $('.slick-prev')
+  $slickPrev.each(function () {
+    $(this).attr('aria-label', 'Кнопка навигации назад')
+  })
+  var $slickNext = $('.slick-next')
+  $slickNext.each(function () {
+    $(this).attr('aria-label', 'Кнопка навигации вперед')
+  })
+
   $('.go-top').on('click', function (e) {
     e.preventDefault()
     var id = $(this).attr('href'),
