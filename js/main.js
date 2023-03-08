@@ -92,7 +92,7 @@ $(function () {
     ],
   })
 
-  $(function () {
+  $(window).on('load', function () {
     $('.gallary__inner').slick({
       dots: false,
       arrows: true,
