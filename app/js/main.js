@@ -12,8 +12,6 @@ $(function () {
     dots: true,
     arrows: false,
     fade: true,
-    //autoplay: true,
-    //autoplaySpeed: 2000,
   })
 
   $('.top-slider__input,.consultation__input--tel').inputmask({
@@ -168,7 +166,13 @@ $(function () {
     e.preventDefault()
     var id = $(this).attr('href'),
       top = $(id).offset().top
-    $('body,html').animate({ scrollTop: top }, 1500)
+    $('body,html').animate(
+      { scrollTop: top },
+      {
+        duration: 1500,
+        passive: true,
+      }
+    )
   })
 
   $('.top__content-buttons').on('click', 'a', function (event) {
